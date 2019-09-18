@@ -1,0 +1,7 @@
+set code [lindex $argv 0]
+set user [lindex $argv 1]
+
+spawn ssh -o StrictHostKeyChecking=no $user@jump.dmall.com -p 2222
+expect "MFA"
+send "$code\r"
+interact
