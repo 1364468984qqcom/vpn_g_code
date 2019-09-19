@@ -1,0 +1,8 @@
+set code [lindex $argv 0]
+set user [lindex $argv 1]
+set jump_server [lindex $argv 2]
+
+spawn ssh -o StrictHostKeyChecking=no ${user}@${jump_server} -p 2222
+expect "MFA"
+send "$code\r"
+interact
