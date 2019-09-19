@@ -1,7 +1,7 @@
 #!/bin/sh
 
-user="你的vpn账号"
-token="你的谷歌验证token 16位字符串,jumpserver个人信息重置MFA可查看"
+user="zhun.yang"
+token="52ZWK75AAF5N3THW"
 jump_server="jump.dmall.com"
 
 SH_HOME=$(cd "$(dirname $0)";pwd)
