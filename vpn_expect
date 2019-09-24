@@ -8,7 +8,7 @@ spawn ssh -o StrictHostKeyChecking=no ${user}@${jump_server} -p 2222
 expect {
     "*MFA auth" {
         set code [exec python3 ${SH_HOME}/g_code3.py ${token}];
-        send "${code}\r";
+        send "${code}1\r";
         exp_continue;
     }
     "*1)*" {
